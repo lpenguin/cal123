@@ -1,4 +1,4 @@
-from django.conf.urls import patterns, include, url
+from django.conf.urls.defaults import *
 from views import index_view, calendar_view, calendars_view, events_view, event_edit_view, event_view
 from django.conf.urls.static import static
 import settings
@@ -25,7 +25,6 @@ urlpatterns = patterns('',
     (r'^event/(\d+)/(\w+)$', event_view),
 
 #    (r'^events_add/(\d+)/(\d+)/(\d+)/(\d+)', events_add_view),
-)
-#+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+)+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 
