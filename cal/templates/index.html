@@ -3,7 +3,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Bootstrap, from Twitter</title>
+    <title>Calendar123</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -28,6 +28,8 @@
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/static/ico/apple-touch-icon-114-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/static/ico/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="/static/ico/apple-touch-icon-57-precomposed.png">
+
+    <link href="/static/css/cal123.css" rel="stylesheet">
   </head>
 
   <body>
@@ -40,12 +42,13 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <a class="brand" href="#">Project name</a>
+          <a class="brand" href="#">Calendar123</a>
           <div class="nav-collapse collapse">
             <ul class="nav">
-              <li class="active"><a href="#">Home</a></li>
+              <li class="active"><a href="/">Home</a></li>
               <li><a href="#about">About</a></li>
-              <li><a href="#contact">Contact</a></li>
+{#              <li><a href="#contact">Contact</a></li>#}
+              <li><a href="#">{% if not user.is_authenticated %}Login{% else %}{{ user }}{% endif %}</a></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
@@ -54,15 +57,14 @@
 
     <div class="container">
     {% block content %}
-      <h1>Bootstrap starter template</h1>
-      <p>Use this document as a way to quick start any new project.<br> All you get is this message and a barebones HTML document.</p>
+
     {% endblock %}
     </div> <!-- /container -->
 
     <!-- Le javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="/static/js/jquery.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
     <script src="/static/js/bootstrap-transition.js"></script>
     <script src="/static/js/bootstrap-alert.js"></script>
     <script src="/static/js/bootstrap-modal.js"></script>
@@ -75,7 +77,8 @@
     <script src="/static/js/bootstrap-collapse.js"></script>
     <script src="/static/js/bootstrap-carousel.js"></script>
     <script src="/static/js/bootstrap-typeahead.js"></script>
-
+    {% block script %}
+    {% endblock %}
   </body>
 </html>
 

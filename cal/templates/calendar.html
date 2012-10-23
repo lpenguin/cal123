@@ -1,0 +1,39 @@
+{% extends "index.html" %}
+{% block script %}
+<script>
+    $(function(){
+        $('.cal-cell').click(function(){
+            date = $(this).attr('data')
+            window.location.href = '/events/{{ calendar.id }}/'+date;
+        })
+    })
+</script>
+{% endblock %}
+
+
+{% block content %}
+    {% for week in grid %}
+        <div class="row">
+        {% for day in week %}
+            <div class="span1 cal-cell
+            {% if day.inactive %}cal-cell-inactive{% endif %}
+            {% if day.istoday %}cal-cell-today{% endif %} "
+             data="{{ day.date.year }}/{{ day.date.month }}/{{ day.date.day }}">
+            <div class="cal-cell-daynum">
+            {{ day.day_name }}
+            {{ day.date.day }}
+            </div>
+            <br />
+            <div class="cal-event-block">
+                {% for event in day.events %}
+                    <div class='cal-event'>
+                        {{ event.name }}
+                    </div>
+                {% endfor %}
+            </div>
+
+            </div>
+        {% endfor %}
+        </div>
+    {% endfor %}
+{% endblock %}

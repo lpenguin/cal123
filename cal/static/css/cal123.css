@@ -1,0 +1,38 @@
+.cal-cell {
+    margin: 0px;
+    border-width: 1px;
+    border-style: solid;
+    height: 70px;
+    width: 100px;
+    margin-right: -1px;
+    margin-bottom: -1px;
+    padding: 3px;
+
+    font-size: 12px;
+}
+
+.cal-cell:hover{
+    cursor: pointer;
+}
+
+.cal-cell-inactive {
+    background-color: #d9d9d9;
+}
+
+.cal-cell-daynum {
+    float: right;
+    margin-right: 5px;
+}
+.cal-cell-today {
+    background-color: #b1eeff;
+}
+.cal-event-block{
+
+}
+.cal-event {
+    font-size: 11px;
+}
+
+.hidden {
+    display: none;
+}

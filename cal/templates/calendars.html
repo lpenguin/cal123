@@ -1,0 +1,10 @@
+{% extends 'index.html' %}
+{% block content %}
+    <h3>Calendars by @{{ user }}</h3>
+    <ul>
+        {% for calendar in calendars %}
+            <li><a href="/calendar/{{ calendar.id }}"> {{ calendar.name }}</a> - {{ calendar.description }}</li>
+        {% endfor %}
+    </ul>
+
+{% endblock %}

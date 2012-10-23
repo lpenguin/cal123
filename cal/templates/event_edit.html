@@ -1,0 +1,39 @@
+{% extends 'index.html' %}
+
+{% block script %}
+    <script language="javascript">
+    $(function(){
+       $('[name=delete-btn]').click(function(){
+          window.location='/event/'+{{ event.id }}+'/delete'
+       });
+    });
+    </script>
+{% endblock %}
+{% block content %}
+{#    <form action='/event_submit/'>#}
+{#        <legend>Legend</legend>#}
+{#        <label>Label name</label>#}
+{#        <input type="text" placeholder="Type something…">#}
+{#        <span class="help-block">Example block-level help text here.</span>#}
+{#        <label class="checkbox">#}
+{#            <input type="checkbox"> Check me out#}
+{#        </label>#}
+{#        <button type="submit" class="btn">Submit</button>#}
+{#    </form>#}
+
+    {% if form.errors %}
+        <p style="color: red;">
+            Please correct the error{{ form.errors|pluralize }} below.
+        </p>
+    {% endif %}
+
+    <form action="" method="post">
+        {% csrf_token %}
+        <table>
+            {{ form.as_table }}
+        </table>
+        <input type="submit" value="Сохранить" />
+        <input type="submit" value="Удалить" name='delete-btn'/>
+    </form>
+
+{% endblock %}
