@@ -26,7 +26,7 @@ def index_view(request):
 
 def about_view(request):
     t = get_template('about.html')
-    html = t.render(Context({}))
+    html = t.render(Context({'user': request.user}))
     return HttpResponse(html)
 
 def login_or_register_view(request):
@@ -53,7 +53,7 @@ def register_view(request):
             return HttpResponseRedirect(next)
     else:
         form = RegistrationForm ()
-    t = get_template('form.html')
+    t = get_template('register.html')
     html = t.render( RequestContext(request, {'form': form}))
     return HttpResponse(html)
 
@@ -73,7 +73,7 @@ def login_view(request):
                 return HttpResponseRedirect(next)
     else:
         form = LoginForm()
-    t = get_template('form.html')
+    t = get_template('login.html')
     html = t.render( RequestContext(request, {'form': form}))
     return HttpResponse(html)
 

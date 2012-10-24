@@ -1,0 +1,55 @@
+{% extends 'index.html' %}
+
+{% block content %}
+    {% if auth_error %}
+        <div class="alert alert-error">
+            Ошибка аутентификации
+        </div>
+
+    {% endif %}
+    {% if form.errors %}
+        <div class="alert alert-error">
+            Пожалуйста исправьте указанные ниже ошибки.
+        </div>
+
+    {% endif %}
+
+    <form action="/accounts/login/" method="post">
+        {% csrf_token %}
+        <div class="row">
+            <div class="span1">Логин</div>
+            <div class="span3">{{ form.login }}</div>
+            {% if form.login.errors %}
+                <div class="span4">
+                    <ul class="unstyled">
+                        {% for error in form.login.errors %}
+                            <li><strong>{{ error|escape }}</strong></li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            {% endif %}
+
+
+        </div>
+
+        <div class="row">
+            <div class="span1">Пароль</div>
+            <div class="span3">{{ form.password }}</div>
+            {% if form.password.errors %}
+                <div class="span4">
+                    <ul class="unstyled">
+                        {% for error in form.password.errors %}
+                            <li><strong>{{ error|escape }}</strong></li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            {% endif %}
+        </div>
+
+        <div class="row">
+            <div class="span1"></div>
+            <div class="span3"><button name="submit-btn" class="btn">Войти</button></div>
+
+    </form>
+
+{% endblock %}

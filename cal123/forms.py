@@ -15,7 +15,7 @@ class EventForm(forms.Form):
 #    email = forms.CharField(validators=[validate_email])
 
 class RegistrationForm(UserCreationForm):
-    email = forms.EmailField(required=True,validators=[validate_email])
+    email = forms.EmailField(required=True)
 
     class Meta:
         model = User

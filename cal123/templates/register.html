@@ -1,0 +1,74 @@
+{% extends 'index.html' %}
+
+{% block content %}
+    {% if form.errors %}
+        <div class="alert alert-error">
+            Please correct the error{{ form.errors|pluralize }} below.
+        </div>
+
+    {% endif %}
+
+    <form action="/accounts/register/" method="post">
+        {% csrf_token %}
+        <div class="row">
+            <div class="span1">Логин</div>
+            <div class="span3">{{ form.username }}</div>
+            {% if form.username.errors %}
+                <div class="span4">
+                    <ul class="unstyled">
+                        {% for error in form.username.errors %}
+                            <li><strong>{{ error|escape }}</strong></li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            {% endif %}
+
+
+        </div>
+        <div class="row">
+            <div class="span1">email</div>
+            <div class="span3">{{ form.email }}</div>
+            {% if form.email.errors %}
+                <div class="span4">
+                    <ul class="unstyled">
+                        {% for error in form.email.errors %}
+                            <li><strong>{{ error|escape }}</strong></li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            {% endif %}
+        </div>
+        <div class="row">
+            <div class="span1">Пароль</div>
+            <div class="span3">{{ form.password1 }}</div>
+            {% if form.password1.errors %}
+                <div class="span4">
+                    <ul class="unstyled">
+                        {% for error in form.password1.errors %}
+                            <li><strong>{{ error|escape }}</strong></li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            {% endif %}
+        </div>
+        <div class="row">
+            <div class="span1">Еще раз</div>
+
+            <div class="span3">{{ form.password2 }}</div>
+            {% if form.password2.errors %}
+                <div class="span4">
+                    <ul class="unstyled">
+                        {% for error in form.password2.errors %}
+                            <li><strong>{{ error|escape }}</strong></li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            {% endif %}
+        </div>
+        <div class="row">
+            <div class="span1"></div>
+            <div class="span3"><button name="submit-btn" class="btn">Зарегистрироваться</button></div>
+
+    </form>
+
+{% endblock %}

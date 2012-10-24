@@ -37,7 +37,7 @@
                                 {% for event in day.events %}
                                     <div class='cal-event'>
                                             {{ event.name|lower }}
-                                        <div style="float:right; margin-right: 2px;">{{ event.begin_date|date:"H:i"}}</div>
+                                        <div class="cal-event-date"">{{ event.begin_date|date:"H:i"}}</div>
                                     </div>
                                 {% endfor %}
                             </div>

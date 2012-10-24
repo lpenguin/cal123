@@ -74,7 +74,7 @@ class Event(models.Model):
             if selfdb.description != self.description or selfdb.name != self.name:
                 action = EventAction(user=self.owned_by, event=self, type='t', date=datetime.today())
                 action.save()
-            if selfdb.canceled == True:
+            if self.canceled == True:
                 action = EventAction(user=self.owned_by, event=self, type='r', date=datetime.today())
                 action.save()
             super(Event, self).save(*args, **kwargs)

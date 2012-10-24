@@ -1,38 +1,4 @@
-
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>Calendar123</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <!-- Le styles -->
-    <link href="/static/css/bootstrap.css" rel="stylesheet">
-    <style>
-      body {
-        padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
-      }
-    </style>
-    <link href="/static/css/bootstrap-responsive.css" rel="stylesheet">
-
-    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
-    <!--[if lt IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-
-    <!-- Le fav and touch icons -->
-    <link rel="shortcut icon" href="/static/ico/favicon.ico">
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/static/ico/apple-touch-icon-144-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/static/ico/apple-touch-icon-114-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/static/ico/apple-touch-icon-72-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" href="/static/ico/apple-touch-icon-57-precomposed.png">
-
-    <link href="/static/css/cal123.css" rel="stylesheet">
-  </head>
-
-  <body>
+{% include 'header.html' %}
 
     <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="navbar-inner">
@@ -49,16 +15,15 @@
 {#              <li class="active"><a href="/calendars">Календари</a></li>#}
 {#                {% endif %}#}
 
-              <li><a href="/about">О календаре</a></li>
+
                 {% if not user.is_authenticated %}
-                    <li><a href="/accounts/login">Войти</a></li>
-                    <li><a href="/accounts/register">Регистрация</a></li>
+                    <li><a href="/accounts/login_or_register">Войти / Регистрация</a></li>
 
                     {% else %}
                     <li><a href="#">@{{ user }}</a></li>
                     <li><a href="/accounts/logout">Выйти</a></li>
                 {% endif %}
-
+                <li><a href="/about">О календаре</a></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
@@ -110,7 +75,7 @@
                     Мужики  ! Вот вам подарочек - календарик, который всегда напомнит когда репетиция,
                     или предупредит о том, что ее отменят или перенесут. Пользуйтесь!
                 </p>
-                <p>Для начала <a href="/accounts/login">войди</a> или <a href="/accounts/register">зарегистрируйся</a>.</p>
+                <p>Для начала <a href="/accounts/login_or_register">войди</a> или <a href="/accounts/login_or_register">зарегистрируйся</a>.</p>
             </div>
         </div>
 
@@ -134,8 +99,12 @@
     <script src="/static/js/bootstrap-collapse.js"></script>
     <script src="/static/js/bootstrap-carousel.js"></script>
     <script src="/static/js/bootstrap-typeahead.js"></script>
+    <script language="javascript">
+{#        $(function(){#}
+{#           $('[type=password], [type=text]').attr('autocomplete' , 'off');#}
+{#        });#}
+    </script>
     {% block script %}
     {% endblock %}
-  </body>
-</html>
+{% include 'footer.html' %}
 
