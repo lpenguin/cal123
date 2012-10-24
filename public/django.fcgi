@@ -7,10 +7,8 @@ sys.path.insert(0, os.path.dirname(_PROJECT_DIR))
 sys.path.append('/home/lilacpenguin/opt/lib/python2.6/site-packages/django_coffeescript-0.3-py2.6.egg/')
 sys.path.append('/home/lilacpenguin/opt/lib/python2.6/site-packages/django-1.4-py2.6.egg/')
 
-	
+
 _PROJECT_NAME = _PROJECT_DIR.split('/')[-1]
-d = "%s.settings" % _PROJECT_NAME
-print d
 os.environ['DJANGO_SETTINGS_MODULE'] = "%s.settings" % _PROJECT_NAME
 
 from django.core.servers.fastcgi import runfastcgi

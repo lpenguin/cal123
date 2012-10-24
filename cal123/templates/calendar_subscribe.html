@@ -1,0 +1,17 @@
+{% extends 'index.html' %}
+{% block script %}
+    <script language="javascript">
+        $(function(){
+            $('[name=subscribe-btn]').click(function(){
+                window.location='/calendar_subscribe/{{ calendar.id }}';
+            });
+        });
+    </script>
+{% endblock %}
+{% block breadcrumbs %}
+{% endblock %}
+{% block content %}
+    <p>Вы не подписаны на календарь <a href="#">{{ calendar.name }}</a>
+        пользователя  <a href="#">@{{ calendar.owned_by }}</a>.</p>
+    <button class="btn" name="subscribe-btn">Подписаться</button>
+{% endblock %}

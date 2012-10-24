@@ -1,0 +1,43 @@
+{% extends 'index.html' %}
+
+{% block content %}
+
+    <form action="/accounts/login/" method="post">
+        {% csrf_token %}
+        <div class="row">
+            <div class="span1">Логин</div>
+            <div class="span3">{{ login_form.login }}</div>
+        </div>
+        <div class="row">
+            <div class="span1">Пароль</div>
+            <div class="span3">{{ login_form.password }}</div>
+        </div>
+
+        <button name="submit-btn" class="btn">Войти</button>
+    </form>
+<hr/>
+    или
+ <hr/>
+    <form action="/accounts/register/" method="post">
+        {% csrf_token %}
+        <div class="row">
+            <div class="span1">Логин</div>
+            <div class="span3">{{ register_form.username }}</div>
+        </div>
+        <div class="row">
+            <div class="span1">email</div>
+            <div class="span3">{{ register_form.email }}</div>
+        </div>
+        <div class="row">
+            <div class="span1">Пароль</div>
+            <div class="span3">{{ register_form.password1 }}</div>
+        </div>
+        <div class="row">
+            <div class="span1">Еще раз</div>
+            <div class="span3">{{ register_form.password2 }}</div>
+        </div>
+
+        <button name="submit-btn" class="btn">Зарегистрироваться</button>
+    </form>
+
+{% endblock %}

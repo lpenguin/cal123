@@ -1,10 +1,18 @@
 {% extends 'index.html' %}
 {% block content %}
-    <h3>Календари @{{ user }}</h3>
+    {% if calendars %}
+        <h3>Календари @{{ user }}</h3>
+        <ul>
+            {% for calendar in calendars %}
+                <li><a href="/calendar/{{ calendar.id }}"> {{ calendar.name }}</a> - {{ calendar.description }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+{#    <button class='btn btn-link' name='new-event-btn'>Создать Календарь</button>#}
+    <h3>Подписки @{{ user }}</h3>
     <ul>
-        {% for calendar in calendars %}
-            <li><a href="/calendar/{{ calendar.id }}"> {{ calendar.name }}</a> - {{ calendar.description }}</li>
+        {% for calendar in subscribe_calendars %}
+            <li><a href="/calendar/{{ calendar.id }}"> {{ calendar.name }}</a>&nbsp;@{{ calendar.owned_by }} - {{ calendar.description }}</li>
         {% endfor %}
     </ul>
-
 {% endblock %}

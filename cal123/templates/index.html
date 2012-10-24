@@ -45,11 +45,11 @@
           <a class="brand" href="/">Календари</a>
           <div class="nav-collapse collapse">
             <ul class="nav">
-                {% if user.is_authenticated %}
-              <li class="active"><a href="/calendars">Календари</a></li>
-                {% endif %}
+{#                {% if user.is_authenticated %}#}
+{#              <li class="active"><a href="/calendars">Календари</a></li>#}
+{#                {% endif %}#}
 
-{#              <li><a href="#contact">Contact</a></li>#}
+              <li><a href="/about">О календаре</a></li>
                 {% if not user.is_authenticated %}
                     <li><a href="/accounts/login">Войти</a></li>
                     <li><a href="/accounts/register">Регистрация</a></li>
@@ -107,10 +107,10 @@
         <div class="row">
             <div class="span4">
                 <p>
-                    Мужики! Вот вам подарочек - календарик, который всегда напомнит когда репетиция,
+                    Мужики  ! Вот вам подарочек - календарик, который всегда напомнит когда репетиция,
                     или предупредит о том, что ее отменят или перенесут. Пользуйтесь!
                 </p>
-                <p>Для начала <a href="/accounts/login">войди</a> или <a href="/accounts/register">зарегестрируйся</a>.</p>
+                <p>Для начала <a href="/accounts/login">войди</a> или <a href="/accounts/register">зарегистрируйся</a>.</p>
             </div>
         </div>
 

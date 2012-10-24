@@ -17,6 +17,9 @@ urlpatterns = patterns('',
     # Uncomment the next line to enable the admin:
     url(r'^admin/', include(admin.site.urls)),
     (r'^$', index_view),
+    (r'^about', about_view),
+
+    (r'^calendar/(\d+)/(\d+)/(\d+)', calendar_view),
     (r'^calendar/(\d+)', calendar_view),
     (r'^calendars/', calendars_view),
     (r'^events/(\d+)/(\d+)/(\d+)/(\d+)', events_view),
@@ -25,9 +28,12 @@ urlpatterns = patterns('',
     (r'^event_edit/(\d+)$', event_edit_view),
     (r'^event/(\d+)/$', event_view),
     (r'^event/(\d+)/(\w+)$', event_view),
+    (r'^accounts/login_or_register/', login_or_register_view),
     (r'^accounts/login/', login_view),
     (r'^accounts/logout/', logout_view),
     (r'^accounts/register/', register_view),
+    (r'calendar_subscribe/(\d+)', calendar_subscribe_view),
+    (r'calendar_unsubscribe/(\d+)', calendar_unsubscribe_view),
 
 #    (r'^events_add/(\d+)/(\d+)/(\d+)/(\d+)', events_add_view),
 )+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

@@ -3,8 +3,8 @@
 {% block script %}
     <script language="javascript">
     $(function(){
-       $('[name=delete-btn]').click(function(){
-          window.location='/event_edit/{{ event.id }}/delete';
+       $('[name=cancel-btn]').click(function(){
+          window.location='/event_edit/{{ event.id }}/cancel';
        });
         $('[name=submit-btn]').click(function(){
             $('form').submit();
@@ -35,6 +35,7 @@
 
     </form>
     <button name="submit-btn" class="btn">Сохранить</button>
-    <button name='delete-btn' class="btn btn-danger">Удалить</button>
-
+    {% if edit %}
+    <button name='cancel-btn' class="btn btn-danger">Отменить мероприятие</button>
+    {% endif %}
 {% endblock %}

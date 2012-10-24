@@ -1,0 +1,25 @@
+{% include 'header.html' %}
+
+<p>Дорогой {{ user }}!</p>
+
+<p>Обновления</p>
+<ul>
+    {% for action in actions %}
+        <li>
+        {% if action.type == 'c' %}
+            {% include 'notify/event_create.html' %}
+        {% endif %}
+        {% if action.type == 'r' %}
+            {% include 'notify/event_cancel.html' %}
+        {% endif %}
+        {% if action.type == 't' %}
+            {% include 'notify/event_change_text.html' %}
+        {% endif %}
+        {% if action.type == 'd' %}
+            {% include 'notify/event_change_time.html' %}
+        {% endif %}
+        </li>
+    {% endfor %}
+</ul>
+
+{% include 'footer.html' %}

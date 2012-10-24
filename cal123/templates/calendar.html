@@ -7,35 +7,75 @@
             window.location.href = '/events/{{ calendar.id }}/'+date;
         })
     })
+
+    $(function(){
+        $('[name=btn-unsubscribe]').click(function(){
+            window.location.href = '/calendar_unsubscribe/{{ calendar.id }}/';
+        })
+    })
 </script>
 {% endblock %}
 
 
 {% block content %}
     <h3>{{ cal_date|date:"M Y" }}</h3>
-    {% for week in grid %}
-        <div class="row">
-        {% for day in week %}
-            <div class="span1 cal-cell
+    <div class="row">
+        <div class="span9">
+            {% for week in grid %}
+                <div class="row">
+                    {% for day in week %}
+                        <div class="span1 cal-cell
             {% if day.inactive %}cal-cell-inactive{% endif %}
             {% if day.istoday %}cal-cell-today{% endif %} "
-             data="{{ day.date.year }}/{{ day.date.month }}/{{ day.date.day }}">
-            <div class="cal-cell-daynum">
-            {{ day.day_name }}
-            {{ day.date.day }}
-            </div>
-            <br />
-            <div class="cal-event-block">
-                {% for event in day.events %}
-                    <div class='cal-event'>
-                        {{ event.name }}
+                             data="{{ day.date.year }}/{{ day.date.month }}/{{ day.date.day }}">
+                            <div class="cal-cell-daynum">
+                                {{ day.day_name }}
+                                {{ day.date.day }}
+                            </div>
+                            <br />
+                            <div class="cal-event-block">
+                                {% for event in day.events %}
+                                    <div class='cal-event'>
+                                            {{ event.name|lower }}
+                                        <div style="float:right; margin-right: 2px;">{{ event.begin_date|date:"H:i"}}</div>
+                                    </div>
+                                {% endfor %}
+                            </div>
 
-                    </div>
-                {% endfor %}
+                        </div>
+                    {% endfor %}
+                </div>
+            {% endfor %}
+            <div class="pagination">
+                <ul>
+                    {% for month in monthes %}
+                        <li
+                        {% if cal_date == month %}
+                            class="active"
+                        {% endif %}
+                                ><a href="/calendar/{{ calendar.id }}/{{ month.year }}/{{ month.month }}">{{ month|date:"M"}}</a></li>
+                    {% endfor %}
+                </ul>
             </div>
-
-            </div>
-        {% endfor %}
         </div>
-    {% endfor %}
+        <div class="span3">
+            <dl>
+                <dt>Название</dt>
+                <dd>{{ calendar.name }}</dd>
+                <dt>Описание</dt>
+                <dd>{{ calendar.description }}</dd>
+                <dt>Подписаны</dt>
+                <dd>
+                    <ul>
+                        {% for subscriber in subscribers %}
+                            <li>@{{ subscriber }}</li>
+                        {% endfor %}
+                    </ul>
+
+                </dd>
+                <button name="btn-unsubscribe" class="btn ">Отписаться</button>
+            </dl>
+        </div>
+    </div>
+
 {% endblock %}

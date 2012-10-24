@@ -2,8 +2,8 @@
     margin: 0px;
     border-width: 1px;
     border-style: solid;
-    height: 70px;
-    width: 100px;
+    height: 80px;
+    width: 120px;
     margin-right: -1px;
     margin-bottom: -1px;
     padding: 3px;
@@ -24,18 +24,26 @@
     margin-right: 5px;
 }
 .cal-cell-today {
-    background-color: #b1eeff;
+    /*background-color: #b1eeff;*/
+    /*border-width: 2px;*/
+    /*margin-right: -1px;*/
+    /*margin-: -1px;*/
 }
 .cal-event-block{
 
 }
 .cal-event {
     font-size: 11px;
-    border-radius: 6px;
-    background-color: #468847;
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #D5D8D3;
     padding-left: 8px;
-    margin-bottom: 2px;;
-    color: white;
+    /*background-color: #E0FEFE;*/
+    margin-bottom: 2px;
+    line-height: 15px;
+    height: 15px;;
+    /*color: white;*/
 }
 
 .hidden {

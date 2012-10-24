@@ -13,7 +13,7 @@ def get_month_grid(cal_obj, year, month):
     cal = calendar.Calendar()
     first_week = True
     for day in cal.itermonthdates(year, month):
-        events = Event.objects.filter(calendar=cal_obj, begin_date__gte=day, begin_date__lt=day+timedelta(days=1))
+        events = Event.objects.filter(calendar=cal_obj, begin_date__gte=day, begin_date__lt=day+timedelta(days=1), canceled=0)
         inactive = False
         istoday = day == date.today()
         day_name = ''
