@@ -12,6 +12,7 @@
 
 
 {% block content %}
+    <h3>{{ cal_date|date:"M Y" }}</h3>
     {% for week in grid %}
         <div class="row">
         {% for day in week %}
@@ -28,6 +29,7 @@
                 {% for event in day.events %}
                     <div class='cal-event'>
                         {{ event.name }}
+
                     </div>
                 {% endfor %}
             </div>

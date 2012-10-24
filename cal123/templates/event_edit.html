@@ -4,11 +4,21 @@
     <script language="javascript">
     $(function(){
        $('[name=delete-btn]').click(function(){
-          window.location='/event/'+{{ event.id }}+'/delete'
+          window.location='/event_edit/{{ event.id }}/delete';
        });
+        $('[name=submit-btn]').click(function(){
+            $('form').submit();
+        });
+        {% if begin_date %}
+            $('[name=begin_date]').val("{{ begin_date|date:"Y-m-d H:i:s" }}");
+        {% endif %}
+        {% if end_date %}
+            $('[name=end_date]').val("{{ end_date|date:"Y-m-d H:i:s" }}");
+        {% endif %}
     });
     </script>
 {% endblock %}
+
 {% block content %}
     {% if form.errors %}
         <p style="color: red;">
@@ -21,8 +31,10 @@
         <table>
             {{ form.as_table }}
         </table>
-        <input type="submit" value="Сохранить" />
-        <input type="submit" value="Удалить" name='delete-btn'/>
+
+
     </form>
+    <button name="submit-btn" class="btn">Сохранить</button>
+    <button name='delete-btn' class="btn btn-danger">Удалить</button>
 
 {% endblock %}

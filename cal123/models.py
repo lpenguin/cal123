@@ -31,7 +31,7 @@ class Calendar(models.Model):
     description =  models.TextField(blank=True)
     owned_by = models.ForeignKey(User, related_name='+')
     edit_permission = models.CharField(max_length=1, choices=EDITPERMISSON)
-    subscribers  = models.ManyToManyField(User, blank=True)
+    subscribers = models.ManyToManyField(User, blank=True)
 
     def __unicode__(self):
         return self.name

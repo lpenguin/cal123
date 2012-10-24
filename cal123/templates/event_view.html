@@ -21,15 +21,15 @@
         <div class="span3">
             <dl>
                 <dt>Начало в</dt>
-                <dd>{{ event.begin_date }}</dd>
+                <dd>{{ event.begin_date|date:"Y-m-d H:i:s"}}</dd>
                 {% if event.end_date %}
                     <dt>Конец в</dt>
-                    <dd>{{ event.end_date }}</dd>
+                    <dd>{{ event.end_date|date:"Y-m-d H:i:s"}}</dd>
                 {% endif %}
             </dl>
 
             {% if  accepted %}
-            <h4>Приняли</h4>
+            <h4>Подтвердили</h4>
             <ul>
                 {% for guest in accepted %}
                     <li>{{ guest }}</li>

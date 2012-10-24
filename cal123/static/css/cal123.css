@@ -31,6 +31,11 @@
 }
 .cal-event {
     font-size: 11px;
+    border-radius: 6px;
+    background-color: #468847;
+    padding-left: 8px;
+    margin-bottom: 2px;;
+    color: white;
 }
 
 .hidden {

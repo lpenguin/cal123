@@ -1,0 +1,20 @@
+{% extends 'index.html' %}
+
+{% block content %}
+    {% if form.errors %}
+        <div class="alert alert-error">
+            Please correct the error{{ form.errors|pluralize }} below.
+        </div>
+
+    {% endif %}
+
+    <form action="" method="post">
+        {% csrf_token %}
+        <table>
+            {{ form.as_table }}
+        </table>
+        <button name="submit-btn" class="btn">Войти</button>
+    </form>
+
+
+{% endblock %}

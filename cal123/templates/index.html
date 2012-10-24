@@ -42,21 +42,78 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <a class="brand" href="#">Calendar123</a>
+          <a class="brand" href="/">Календари</a>
           <div class="nav-collapse collapse">
             <ul class="nav">
-              <li class="active"><a href="/">Home</a></li>
-              <li><a href="#about">About</a></li>
+                {% if user.is_authenticated %}
+              <li class="active"><a href="/calendars">Календари</a></li>
+                {% endif %}
+
 {#              <li><a href="#contact">Contact</a></li>#}
-              <li><a href="#">{% if not user.is_authenticated %}Login{% else %}{{ user }}{% endif %}</a></li>
+                {% if not user.is_authenticated %}
+                    <li><a href="/accounts/login">Войти</a></li>
+                    <li><a href="/accounts/register">Регистрация</a></li>
+
+                    {% else %}
+                    <li><a href="#">@{{ user }}</a></li>
+                    <li><a href="/accounts/logout">Выйти</a></li>
+                {% endif %}
+
             </ul>
           </div><!--/.nav-collapse -->
         </div>
       </div>
     </div>
 
+    {% load assign %}
+    {% if not calendar %}
+        {% if event %}
+            {% assign calendar event.calendar %}
+        {% endif %}
+    {% endif %}
+    {% if not date %}
+        {% if event %}
+            {% assign date event.begin_date %}
+        {% endif %}
+    {% endif %}
+
+
+
+        {% block breadcrumbs %}
+            {% if user.is_authenticated %}
+            <ul class="breadcrumb">
+                {% if calendar %}
+                    <li><a href="/calendars/{{ calendar.owned_by.id }}">Календари @{{ calendar.owned_by }}</a> <span class="divider">/</span></li>
+                    {% else %}
+                    <li><a href="/calendars">Календари @{{ user }}</a> <span class="divider">/</span></li>
+                {% endif %}
+
+{#                <li><a href="/calendars">Календари</a> <span class="divider">/</span></li>#}
+                {% if calendar %}
+                    <li><a href="/calendar/{{ calendar.id }}">{{ calendar.name }}</a> <span class="divider">/</span></li>
+                {% endif %}
+                {% if date %}
+                    <li><a href="/events/{{ calendar.id }}/{{ date|date:"Y/m/d" }}">{{ date|date:"Y-m-d" }}</a> <span class="divider">/</span></li>
+                {% endif %}
+                {% if event %}
+                    <li><a href="/event/{{ event.id }}">{{ event.name }}</a> <span class="divider">/</span></li>
+                {% endif %}
+            </ul>
+            {% endif %}
+        {% endblock %}
+
     <div class="container">
     {% block content %}
+        <div class="row">
+            <div class="span4">
+                <p>
+                    Мужики! Вот вам подарочек - календарик, который всегда напомнит когда репетиция,
+                    или предупредит о том, что ее отменят или перенесут. Пользуйтесь!
+                </p>
+                <p>Для начала <a href="/accounts/login">войди</a> или <a href="/accounts/register">зарегестрируйся</a>.</p>
+            </div>
+        </div>
+
 
     {% endblock %}
     </div> <!-- /container -->

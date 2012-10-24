@@ -1,5 +1,5 @@
 from django.conf.urls.defaults import *
-from views import index_view, calendar_view, calendars_view, events_view, event_edit_view, event_view
+from views import *
 from django.conf.urls.static import static
 import settings
 # Uncomment the next two lines to enable the admin:
@@ -20,9 +20,14 @@ urlpatterns = patterns('',
     (r'^calendar/(\d+)', calendar_view),
     (r'^calendars/', calendars_view),
     (r'^events/(\d+)/(\d+)/(\d+)/(\d+)', events_view),
-    (r'^event_edit/(\d+)', event_edit_view),
+    (r'^event_add/(\d+)/(\d+)/(\d+)/(\d+)', event_add_view),
+    (r'^event_edit/(\d+)/(\w+)$', event_edit_view),
+    (r'^event_edit/(\d+)$', event_edit_view),
     (r'^event/(\d+)/$', event_view),
     (r'^event/(\d+)/(\w+)$', event_view),
+    (r'^accounts/login/', login_view),
+    (r'^accounts/logout/', logout_view),
+    (r'^accounts/register/', register_view),
 
 #    (r'^events_add/(\d+)/(\d+)/(\d+)/(\d+)', events_add_view),
 )+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
