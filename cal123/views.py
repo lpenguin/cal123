@@ -30,8 +30,8 @@ def about_view(request):
     return HttpResponse(html)
 
 def login_or_register_view(request):
-#    if 'next' in request.GET:
-#        request.session['next'] = request.GET['next']
+    if 'next' in request.GET:
+        request.session['next'] = request.GET['next']
     login_form = LoginForm()
     register_form = RegistrationForm()
     t = get_template('login_or_register.html')
