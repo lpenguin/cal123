@@ -79,19 +79,13 @@ class Event(models.Model):
                 action.save()
             super(Event, self).save(*args, **kwargs)
 
-         # Call the "real" save() method.
-
-#    def delete(self, *args, **kwargs):
-#        if self.id:
-#            action = EventAction(user=self.owned_by, event=self, type='r', date=datetime.today())
-#            action.save()
-#
-#        super(Event, self).delete(*args, **kwargs) # Call the "real" save() method.
 
 class EventGuest(models.Model):
     user = models.ForeignKey(User)
     status = models.CharField(max_length=1, default='p', choices=GUESTSTATUS)
     event = models.ForeignKey(Event, related_name='+')
+    notify_date = models.DateTimeField(null=True)
+
     def __unicode__(self):
         return str(self.user)+' '+self.event.name
 
@@ -116,3 +110,8 @@ class EventAction(models.Model):
     def __unicode__(self):
         return str(self.user)+' '+self.event.name+' '+self.type
 
+class Comment(models.Model):
+    user = models.ForeignKey(User)
+    text = models.TextField()
+    event = models.ForeignKey(Event)
+    comment_date = models.DateTimeField(auto_now=True)

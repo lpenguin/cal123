@@ -1,7 +1,7 @@
 from django.template.loader import get_template
 from django.core.exceptions import ObjectDoesNotExist
 from django.template import Context
-from django.http import HttpResponse, HttpResponseRedirect
+from django.http import HttpResponse, HttpResponseRedirect, HttpRequest
 from datetime import datetime, date, timedelta
 from django.contrib.auth.decorators import login_required
 from django.contrib import auth
@@ -9,11 +9,13 @@ from django.template import RequestContext
 from django.contrib.auth.forms import UserCreationForm
 
 from utils import *
-from models import Calendar, Event, EventGuest, EventAction
+from models import Calendar, Event, EventGuest, EventAction, Comment
 
 from forms import *
 
 import notifier
+
+from django.utils import timezone
 
 
 def index_view(request):
@@ -177,12 +179,19 @@ def event_view(request, event_id, action=''):
     if action == 'accept':
         event_guest = EventGuest.objects.get(event=event, user=request.user)
         event_guest.status='a'
+        event_guest.notify_date = timezone.now()
         event_guest.save()
         return HttpResponseRedirect('/event/'+str(event_id))
     elif action == 'decline':
         event_guest = EventGuest.objects.get(event=event, user=request.user)
         event_guest.status='d'
+        event_guest.notify_date = timezone.now()
         event_guest.save()
+        return HttpResponseRedirect('/event/'+str(event_id))
+    elif action == 'comment':
+        if 'comment_text' in request.POST and request.POST['comment_text']:
+            comment = Comment(user=request.user, event=event, text=request.POST['comment_text'])
+            comment.save()
         return HttpResponseRedirect('/event/'+str(event_id))
 
     accepted =  [ guest.user for guest in EventGuest.objects.filter(event=event, status='a') ]
@@ -191,7 +200,13 @@ def event_view(request, event_id, action=''):
 
 
     t = get_template('event_view.html')
-    html = t.render(Context({'user': request.user, 'event': event, 'accepted': accepted, 'pending': pending, 'declined': declined}))
+
+    comments = Comment.objects.filter(event=event)
+    html = t.render( RequestContext(request, ({'user': request.user, 'event': event,
+                             'accepted': accepted, 'pending': pending,
+                             'declined': declined,
+                             'comments': comments
+                    })))
     return HttpResponse(html)
 
 @login_required
@@ -212,7 +227,7 @@ def event_add_view(request, calendar_id,  year, month, day):
             event.save()
             guests = []
             for subscriber in calendar.subscribers.all():
-                guest = EventGuest(event=event, user=subscriber)
+                guest = EventGuest(event=event, user=subscriber, notify_date=timezone.now())
                 guest.save()
                 guests.append(guest)
 

@@ -1,8 +1,6 @@
-{% include 'header.html' %}
-
-<p>Дорогой {{ user }}!</p>
-
-<p>Обновления</p>
+{% extends 'notify/notify_base.html' %}
+{% block content %}
+    <p>Обновления</p>
 <ul>
     {% for action in actions %}
         <li>
@@ -21,5 +19,4 @@
         </li>
     {% endfor %}
 </ul>
-
-{% include 'footer.html' %}
+{%  endblock %}

@@ -1,2 +1,2 @@
 У мероприятия <a href="{{ site_name }}/event/{{ action.event.id }}">{{ action.event.name }}</a>
-было изменено время проведения: {{ action.event.begin_date }} -> {{ action.event.end_date }}
+было изменено время проведения: {{ action.event.begin_date|date:"Y-m-d H:i" }}

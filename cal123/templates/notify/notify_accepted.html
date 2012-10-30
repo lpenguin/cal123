@@ -1,0 +1,7 @@
+{% extends 'notify/notify_base.html' %}
+{% block content %}
+    Напоминаю, что до <a href="{{ site_name }}/event/{{ guest.event.id }}">{{ guest.event.name }}</a>
+    осталось: {{guest.event.begin_date|timeuntil:today}} <br />
+
+
+{% endblock %}

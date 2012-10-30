@@ -1,4 +1,5 @@
 #!/usr/bin/python
+
 __author__ = 'npryanichnikov'
 import os, sys
 os.environ['DJANGO_SETTINGS_MODULE'] = "cal123.settings"
@@ -16,6 +17,7 @@ os.environ['DJANGO_SETTINGS_MODULE'] = "cal123.settings"
 
 users_dict =  notifier.get_notifications()
 notifier.notify(users_dict )
+notifier.notify_events()
 
 
 

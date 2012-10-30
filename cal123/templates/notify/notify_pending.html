@@ -1,0 +1,9 @@
+{% extends 'notify/notify_base.html' %}
+{% block content %}
+    Чувак надо решать, до <a href="{{ site_name }}/event/{{ guest.event.id }}">{{ guest.event.name }}</a>
+    ({{ guest.event.begin_date|date:"Y-m-d H:i" }})
+    осталось: {{guest.event.begin_date|timeuntil:today}} <br />
+
+    <a class='btn btn-success' href="{{ site_name }}/event/{{ guest.event.id }}/accept">Подтвердить</a>
+<a  class='btn btn-danger'  href="{{ site_name }}/event/{{ guest.event.id }}/decline">Отказаться</a>
+{% endblock %}

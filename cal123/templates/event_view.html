@@ -52,26 +52,49 @@
                 {% endfor %}
             </ul>
             {% endif %}
+            {% if not user in accepted %}
+                <button class='btn btn-success' name='accept-btn'>Подтвердить</button>
+            {% endif %}
+            {%  if not user in declined %}
+                <button class='btn btn-danger' name='decline-btn'>Отказаться</button>
+            {% endif %}
+            {% if user == event.owned_by %}
+                <button class='btn btn-link' name='edit-btn'>Редактировать</button>
+            {% endif %}
         </div>
         <div class="span3">
 
             <dl>
                 <dt>Описание</dt>
-                <dd>{{ event.description }}</dd>
+                <dd>
+                    {% if event.description %}
+                    {{ event.description }}
+                    {% else %}
+                    Нет описания
+                    {% endif %}
+                </dd>
             </dl>
+            <div>
+                <h4>Комментарии</h4>
+                <ul>
+                    {% for comment in comments %}
+                        <li><div>{{ comment.text }}
+                            <br />
+                        <small class="muted"> @{{ comment.user }} {{ comment.comment_date|date:"Y-m-d H:i:s" }}</small>
+                        </div></li>
+                    {% endfor %}
+                </ul>
+                <form action='/event/{{ event.id }}/comment' method="post">
+                    {% csrf_token %}
+                    <textarea name="comment_text"></textarea>
+                    <button class="btn">Оставить кoмментарий</button>
+                </form>
+            </div>
         </div>
     </div>
     <div class='row'>
         <div class='span4'>
-            {% if not user in accepted %}
-            <button class='btn btn-success' name='accept-btn'>Подтвердить</button>
-            {% endif %}
-            {%  if not user in declined %}
-            <button class='btn btn-danger' name='decline-btn'>Отказаться</button>
-            {% endif %}
-            {% if user == event.owned_by %}
-            <button class='btn btn-link' name='edit-btn'>Редактировать</button>
-            {% endif %}
+
         </div>
     </div>
 {% endblock %}

@@ -2,11 +2,38 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="50a55817-e899-45c2-84be-e7d5d6c1e600" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cal123/admin.py" afterPath="$PROJECT_DIR$/cal123/admin.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cal123/forms.py" afterPath="$PROJECT_DIR$/cal123/forms.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cal123/models.py" afterPath="$PROJECT_DIR$/cal123/models.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cal123/notifier.py" afterPath="$PROJECT_DIR$/cal123/notifier.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cal123/settings.py" afterPath="$PROJECT_DIR$/cal123/settings.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cal123/static/css/cal123.css" afterPath="$PROJECT_DIR$/cal123/static/css/cal123.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cal123/templates/about.html" afterPath="$PROJECT_DIR$/cal123/templates/about.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cal123/templates/calendar.html" afterPath="$PROJECT_DIR$/cal123/templates/calendar.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cal123/templates/calendar_subscribe.html" afterPath="$PROJECT_DIR$/cal123/templates/calendar_subscribe.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cal123/templates/calendars.html" afterPath="$PROJECT_DIR$/cal123/templates/calendars.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cal123/templates/event_edit.html" afterPath="$PROJECT_DIR$/cal123/templates/event_edit.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cal123/templates/event_view.html" afterPath="$PROJECT_DIR$/cal123/templates/event_view.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cal123/templates/events.html" afterPath="$PROJECT_DIR$/cal123/templates/events.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cal123/templates/footer.html" afterPath="$PROJECT_DIR$/cal123/templates/footer.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cal123/templates/form.html" afterPath="$PROJECT_DIR$/cal123/templates/form.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cal123/templates/header.html" afterPath="$PROJECT_DIR$/cal123/templates/header.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cal123/templates/index.html" afterPath="$PROJECT_DIR$/cal123/templates/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cal123/templates/login.html" afterPath="$PROJECT_DIR$/cal123/templates/login.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cal123/templates/login_or_register.html" afterPath="$PROJECT_DIR$/cal123/templates/login_or_register.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cal123/templates/notify/event_change_text.html" afterPath="$PROJECT_DIR$/cal123/templates/notify/event_change_text.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cal123/templates/notify/event_change_time.html" afterPath="$PROJECT_DIR$/cal123/templates/notify/event_change_time.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cal123/templates/notify/event_create.html" afterPath="$PROJECT_DIR$/cal123/templates/notify/event_create.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cal123/templates/notify/notify.html" afterPath="$PROJECT_DIR$/cal123/templates/notify/notify.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cal123/templates/register.html" afterPath="$PROJECT_DIR$/cal123/templates/register.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cal123/templatetags/__init__.py" afterPath="$PROJECT_DIR$/cal123/templatetags/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cal123/templatetags/assign.py" afterPath="$PROJECT_DIR$/cal123/templatetags/assign.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cal123/urls.py" afterPath="$PROJECT_DIR$/cal123/urls.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cal123/utils.py" afterPath="$PROJECT_DIR$/cal123/utils.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cal123/views.py" afterPath="$PROJECT_DIR$/cal123/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/manage.py" afterPath="$PROJECT_DIR$/manage.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/notifier.py" afterPath="$PROJECT_DIR$/notifier.py" />
     </list>
     <ignored path="cal123.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -26,13 +53,76 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="urls.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cal123/urls.py">
+      <file leaf-file-name="notifier.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cal123/notifier.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="58" column="76" selection-start="2262" selection-end="2262" vertical-scroll-proportion="0.0">
               <folding>
-                <element signature="e#0#39#0" expanded="true" />
+                <element signature="e#62#89#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="models.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cal123/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="116" column="16" selection-start="3994" selection-end="4006" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="notifier.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/notifier.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="1" column="0" selection-start="18" selection-end="18" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="notify_accepted.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cal123/templates/notify/notify_accepted.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="101" selection-start="161" selection-end="161" vertical-scroll-proportion="-1.3076923">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="notify_pending.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cal123/templates/notify/notify_pending.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="7" column="100" selection-start="63" selection-end="487" vertical-scroll-proportion="-4.576923">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="event_view.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/cal123/templates/event_view.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="62" column="23" selection-start="2076" selection-end="2076" vertical-scroll-proportion="0.6749522">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cal123/templates/login.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="17" column="8" selection-start="391" selection-end="407" vertical-scroll-proportion="-11.115385">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="settings.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cal123/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="29" column="27" selection-start="1154" selection-end="1154" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -40,7 +130,7 @@
       <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cal123/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="88" column="60" selection-start="3471" selection-end="3471" vertical-scroll-proportion="0.0">
+            <state line="191" column="46" selection-start="6982" selection-end="6982" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="e#0#47#0" expanded="true" />
               </folding>
@@ -48,47 +138,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="events.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cal123/templates/events.html">
+      <file leaf-file-name="admin.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cal123/admin.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="34" selection-start="81" selection-end="81" vertical-scroll-proportion="-1.9615384">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="models.py" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/cal123/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="17" selection-start="799" selection-end="799" vertical-scroll-proportion="0.41827768">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="event_edit.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cal123/templates/event_edit.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="0" selection-start="277" selection-end="277" vertical-scroll-proportion="-7.1538463">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="event_view.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cal123/templates/event_view.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="72" column="79" selection-start="2171" selection-end="2238" vertical-scroll-proportion="-14.346154">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="utils.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cal123/utils.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="21" selection-start="51" selection-end="51" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="8" column="27" selection-start="281" selection-end="281" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#22#54#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -107,10 +163,20 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/cal123/utils.py" />
-        <option value="$PROJECT_DIR$/cal123/views.py" />
         <option value="$PROJECT_DIR$/cal123/templates/event_edit.html" />
         <option value="$PROJECT_DIR$/cal123/templates/events.html" />
+        <option value="$PROJECT_DIR$/cal123/templates/notify/notify_base.html" />
+        <option value="$PROJECT_DIR$/cal123/templates/notify/notify.html" />
+        <option value="$PROJECT_DIR$/cal123/templates/notify/event_change_time.html" />
+        <option value="$PROJECT_DIR$/notifier.py" />
+        <option value="$PROJECT_DIR$/cal123/settings.py" />
+        <option value="$PROJECT_DIR$/cal123/templates/notify/notify_pending.html" />
+        <option value="$PROJECT_DIR$/cal123/templates/notify/notify_accepted.html" />
+        <option value="$PROJECT_DIR$/cal123/notifier.py" />
         <option value="$PROJECT_DIR$/cal123/models.py" />
+        <option value="$PROJECT_DIR$/cal123/admin.py" />
+        <option value="$PROJECT_DIR$/cal123/views.py" />
+        <option value="$PROJECT_DIR$/cal123/templates/event_view.html" />
       </list>
     </option>
   </component>
@@ -146,6 +212,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -196,26 +263,54 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cal123" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cal123" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cal123" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="notify" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
-    <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
     <property name="recentsLimit" value="5" />
+    <property name="options.lastSelected" value="File.Encoding" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
-    <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="DefaultHtmlFileTemplate" value="Html5" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="PublishConfig" serverName="alwausdata.com" serverId="fef503dc-ab5d-4256-af79-6b5e728423d0" autoUpload="true">
     <servers>
       <server id="fef503dc-ab5d-4256-af79-6b5e728423d0">
         <serverdata>
           <mappings>
-            <mapping deploy="/nfs/http8/lilacpenguin/apps/cal123" local="$PROJECT_DIR$" />
+            <mapping deploy="apps/cal123" local="$PROJECT_DIR$" web="lilacpenguin.alwaysdata.net" />
+            <mapping local="" />
           </mappings>
         </serverdata>
       </server>
@@ -246,25 +341,6 @@
       <option name="MULTIPROCESS" value="false" />
       <method />
     </configuration>
-    <configuration default="true" type="tests" factoryName="Unittests">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <module name="cal123" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_SCRIPT" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <option name="PUREUNITTEST" value="true" />
-      <method />
-    </configuration>
     <configuration default="true" type="Python.DjangoServer" factoryName="Django server">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -284,6 +360,25 @@
       <option name="runNoReload" value="false" />
       <option name="useCustomRunCommand" value="false" />
       <option name="customRunCommand" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Unittests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <module name="cal123" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="true" />
       <method />
     </configuration>
     <configuration default="true" type="tests" factoryName="Doctests">
@@ -323,6 +418,8 @@
       <option name="runNoReload" value="false" />
       <option name="useCustomRunCommand" value="false" />
       <option name="customRunCommand" value="" />
+      <RunnerSettings RunnerId="PythonRunner" />
+      <ConfigurationWrapper RunnerId="PythonRunner" />
       <method />
     </configuration>
     <list size="1">
@@ -330,36 +427,75 @@
     </list>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false">
+    <option name="USER" value="" />
+    <option name="PASSWORD" value="" />
+    <option name="mySSHConnectionTimeout" value="30000" />
+    <option name="mySSHReadTimeout" value="30000" />
+    <option name="LAST_MERGED_REVISION" />
+    <option name="MERGE_DRY_RUN" value="false" />
+    <option name="MERGE_DIFF_USE_ANCESTRY" value="true" />
+    <option name="UPDATE_LOCK_ON_DEMAND" value="false" />
+    <option name="IGNORE_SPACES_IN_MERGE" value="false" />
+    <option name="DETECT_NESTED_COPIES" value="true" />
+    <option name="CHECK_NESTED_FOR_QUICK_MERGE" value="false" />
+    <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
+    <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
+    <option name="FORCE_UPDATE" value="false" />
+    <option name="IGNORE_EXTERNALS" value="false" />
+    <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
+      <changelist id="50a55817-e899-45c2-84be-e7d5d6c1e600" name="Default" comment="" />
       <created>1350993362292</created>
       <updated>1350993362292</updated>
     </task>
     <servers />
   </component>
+  <component name="TodoView" selected-index="0">
+    <todo-panel id="selected-file">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="false" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="false" />
+    </todo-panel>
+    <todo-panel id="default-changelist">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="false" />
+    </todo-panel>
+  </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="22" width="1382" height="754" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32996634" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32996634" sideWeight="0.4969697" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32996634" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.6700337" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26136363" sideWeight="0.6700337" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32996634" sideWeight="0.49772727" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32996634" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.6700337" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.6700337" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -415,55 +551,118 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/cal123/urls.py">
+    <entry file="file://$PROJECT_DIR$/cal123/templates/notify/event_cancel.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cal123/templates/notify/notify_base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="0" selection-start="57" selection-end="57" vertical-scroll-proportion="-2.6153846">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cal123/templates/notify/notify.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="21" selection-start="81" selection-end="81" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cal123/templates/notify/event_change_text.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="95" selection-start="14" selection-end="95" vertical-scroll-proportion="-0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cal123/templates/notify/event_create.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="45" selection-start="135" selection-end="152" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cal123/templates/notify/event_change_time.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="78" selection-start="174" selection-end="174" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cal123/templates/notify/notify_pending.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="100" selection-start="63" selection-end="487" vertical-scroll-proportion="-4.576923">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/notifier.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="0" selection-start="18" selection-end="18" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cal123/notifier.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="58" column="76" selection-start="2262" selection-end="2262" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="e#0#39#0" expanded="true" />
+            <element signature="e#62#89#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cal123/utils.py">
+    <entry file="file://$PROJECT_DIR$/cal123/admin.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="21" selection-start="51" selection-end="51" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cal123/templates/event_edit.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="0" selection-start="277" selection-end="277" vertical-scroll-proportion="-7.1538463">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cal123/templates/event_view.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="72" column="79" selection-start="2171" selection-end="2238" vertical-scroll-proportion="-14.346154">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cal123/templates/events.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="34" selection-start="81" selection-end="81" vertical-scroll-proportion="-1.9615384">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cal123/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="88" column="60" selection-start="3471" selection-end="3471" vertical-scroll-proportion="0.0">
+        <state line="8" column="27" selection-start="281" selection-end="281" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="e#0#47#0" expanded="true" />
+            <element signature="e#22#54#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/cal123/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="17" selection-start="799" selection-end="799" vertical-scroll-proportion="0.41827768">
+        <state line="116" column="16" selection-start="3994" selection-end="4006" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cal123/templates/notify/notify_accepted.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="101" selection-start="161" selection-end="161" vertical-scroll-proportion="-1.3076923">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cal123/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="27" selection-start="1154" selection-end="1154" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cal123/templates/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="8" selection-start="391" selection-end="407" vertical-scroll-proportion="-11.115385">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cal123/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="191" column="46" selection-start="6982" selection-end="6982" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#0#47#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cal123/templates/event_view.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="62" column="23" selection-start="2076" selection-end="2076" vertical-scroll-proportion="0.6749522">
           <folding />
         </state>
       </provider>
