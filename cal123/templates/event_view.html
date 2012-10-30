@@ -21,10 +21,10 @@
         <div class="span3">
             <dl>
                 <dt>Начало в</dt>
-                <dd>{{ event.begin_date|date:"Y-m-d H:i:s"}}</dd>
+                <dd>{{ event.begin_date|date:"H:i:s"}}</dd>
                 {% if event.end_date %}
                     <dt>Конец в</dt>
-                    <dd>{{ event.end_date|date:"Y-m-d H:i:s"}}</dd>
+                    <dd>{{ event.end_date|date:"H:i:s"}}</dd>
                 {% endif %}
             </dl>
 

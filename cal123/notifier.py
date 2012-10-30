@@ -20,7 +20,7 @@ def get_accepted():
 def get_pending():
     return EventGuest.objects.filter(status='p')
 
-def notify_about_event(guest):
+def remind_guest(guest):
     if guest.status == 'a':
         guest_type = 'accepted'
     elif guest.status == 'p':
@@ -34,12 +34,12 @@ def notify_about_event(guest):
     if guest.user.email:
         try:
 #            send_html_mail('notifier@calendar.com', guest.user.email, 'Calendar updates', html)
-            send_html_mail('notifier@calendar.com', 'lpenguin@outlook.com', 'Calendar updates', html)
+            send_html_mail('notifier@calendar.com', 'lpenguin@outlook.com', 'Calendar reminder', html)
         finally:
             pass
 
 
-def notify_events():
+def remind():
     # TODO: ТОДО: Нужно оптимизировать забпрос к БД, и убрать условия из if туда. Так же не нужно проверять уже прошедшие мероприятия
     accepted = get_accepted()
     for days_delta in [4, 1]:
@@ -59,7 +59,7 @@ def notify_events():
                     timezone.now() - guest.notify_date > timedelta(days=1)):
                     guest.notify_date = timezone.now()
                     guest.save()
-                    notify_about_event(guest)
+                    remind_guest(guest)
 
     pending = get_pending()
     for days_delta in [7, 6, 5, 4, 3, 2, 1]:
@@ -79,7 +79,7 @@ def notify_events():
                     timezone.now() - guest.notify_date > timedelta(days=1)):
                     guest.notify_date = timezone.now()
                     guest.save()
-                    notify_about_event(guest)
+                    remind_guest(guest)
 
 
 
