@@ -29,14 +29,16 @@
             {% if day.istoday %}cal-cell-today{% endif %} "
                              data="{{ day.date.year }}/{{ day.date.month }}/{{ day.date.day }}">
                             <div class="cal-cell-daynum">
-                                {{ day.day_name }}
+                                {%  if forloop.parentloop.first %}
+                                {{ day.date|date:"D" }}
+                                {% endif %}
                                 {{ day.date.day }}
                             </div>
                             <br />
                             <div class="cal-event-block">
                                 {% for event in day.events %}
                                     <div class='cal-event'>
-                                            {{ event.name|lower }}
+                                            {{ event.name|lower|truncatechars:14 }}
                                         <div class="cal-event-date"">{{ event.begin_date|date:"H:i"}}</div>
                                     </div>
                                 {% endfor %}
